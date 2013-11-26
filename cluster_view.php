@@ -672,7 +672,7 @@ if (! $refresh) {
   if ($showhosts) {
     $data->assign("additional_filter_options", 
 		  'Show only nodes matching <input name=host_regex ' . 
-		  $set_host_regex_value . '>' . 
+		  htmlentities($set_host_regex_value) . '>' . 
 		  '<input class="header_btn" type="SUBMIT" VALUE="Filter">' .
 		  '<div style="display:inline;padding-left:10px;" class="nobr">Max graphs to show <select onChange="ganglia_submit();" name="max_graphs">' . 
 		  $max_graphs_values . 
